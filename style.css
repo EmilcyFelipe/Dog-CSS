@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color:rgba(32, 26, 26, 0.801);
+}
+.dog{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background-color: rgba(85, 39, 39, 0.884);
+    z-index: -2;
+    overflow: hidden;
+}
+.head{
+    position: absolute;
+    background:linear-gradient(to bottom, #7c2b15 50%, #bd583d 100%);
+    width: 80px;
+    height: 60px;
+    top: 40%;
+    left: 100px;
+    border-radius: 40%;
+    animation: moveHead .6s  infinite alternate;
+}
+
+@keyframes moveHead {
+    0%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.ear{
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    background: linear-gradient(to bottom,rgb(75, 23, 9) 50%, rgb(110, 58, 44) 100%);
+    border-radius: 50% 500% 50px 500%;
+    top: 20%;
+    left: 60%; 
+    
+    
+}
+.eye{
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 23%;
+}
+.snout{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background:linear-gradient(to bottom, #7c2b15 20%, #b64d2f 100%);
+    border-radius: 30% 10px 10px 50%;
+    top:39%;
+    left: -32%;
+    
+}
+.snoutBottom{
+    width: 15px;
+    height: 12px;
+    background-color: rgba(32, 26, 26);
+    border-radius: 5px 3px 80% 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* .neck{
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background-color: rgba(133,48,15);
+    border-radius: 100% 50% 10% 10%;
+    transform: rotateZ(-60deg);
+    top: 46%;
+    left: 29%;
+} */
+.piece1Body,.piece2Body{
+    width: 100px;
+    height: 60px;
+    background:linear-gradient(to bottom, #7c2b15 50%, #bd583d 100%);
+    border-radius: 50% 50% 40% 30%;
+    position: absolute;
+    }
+.piece1Body{
+    top: 50%;
+    left: 34%;
+    animation: moveBody 1s 0s infinite alternate;
+    z-index: 0;
+}
+.piece2Body{
+    top: 50%;
+    left: 53%;
+    animation: moveBody 1s .5s infinite alternate;
+}
+
+@keyframes moveBody {
+    0%{
+        transform:translateY(-2px)
+    }
+    
+    100%{
+        transform:translateY(0px)
+    }
+}
+    
+    .tail{
+        width: 80px;
+        height: 15px;
+        background: linear-gradient(to bottom,rgb(75, 23, 9) 50%, rgb(110, 58, 44) 100%);
+        border-radius: 200% 2% 200% 70%;
+        position: absolute;
+        top: 53%;
+        left: 70%;
+        animation: moveTail 1s infinite alternate;
+        transform-origin: left bottom 2px;
+    }
+
+    @keyframes moveTail {
+        0%{
+            transform: rotateZ(-20deg);
+        }
+        100%{
+            transform: rotateZ(0deg);
+        }
+        
+    }
+    
+    .haunch{
+        width: 30px;
+        height: 35px;
+        background: linear-gradient(to top,rgb(139, 52, 28) 50%, rgb(179, 90, 66) 100%);
+        border-radius: 10px 0 50% 80%;
+        position: absolute;
+        transform-origin: center top;
+    }
+
+    #leg1 .haunch{
+        top: 66%;
+        left: 38%;
+        animation: movePaw 1s .5s infinite alternate;
+        box-shadow: -.05rem .2rem 4px rgb(110, 58, 44);
+        
+    }
+
+    .legPiece1{
+        width: 20px;
+        height: 30px;
+        background: linear-gradient(to bottom,rgb(139, 52, 28) 50%, rgb(66, 20, 8) 100%);
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        border-radius: 20%;
+    }
+
+    .legPiece2{
+        width: 28px;
+        height: 10px;
+        background-color: #752e1a;
+        border-radius: 10px 0 0 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+    }
+
+    #leg2 .haunch{
+        top: 66%;
+        left: 65%;
+        animation: movePaw 1s infinite alternate;
+    }
+
+    #leg3 .haunch{
+        top: 66%;
+        left: 37%;
+        z-index: -1;
+        animation: movePaw 1s infinite alternate;
+        
+    }
+
+    #leg4 .haunch{
+        top: 66%;
+        left: 64%;
+        z-index: -1;
+        animation: movePaw 1s .5s infinite alternate;
+    }
+
+    @keyframes movePaw {
+        0%{
+            transform: rotateZ(-30deg);
+        }
+        100%{
+            transform: rotateZ(5deg);
+        }
+        
+    }
+
+    .street{
+        width: 120%;
+        height: 60px;
+        background-color:rgba(158, 162, 163, 0.438);
+        position: absolute;
+        bottom: 0;
+        z-index: -10;
+        display: flex;
+        justify-content: space-around;
+    }
+    .streetPiece{
+        width: 80px;
+        height: 40px;
+        /* background-color: #7c2b15; */
+        animation: moveStreet 10s infinite;
+    }
+
+    @keyframes moveStreet {
+        0%{
+            transform: translateX(-330px);
+        }
+        100%{
+            transform: translateX(250px);
+        }
+        
+    }
+    .land{
+        width: 40px;
+        height: 5px;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+
+    }
+    .land:nth-child(1){
+        
+        top:25%
+    }
+    .land:nth-child(2){
+        right: 0;
+        top:50%
+        
+    }
+    .land:nth-child(3){
+        top:75%   
+    }
+
+
+    
+
+
+
+
