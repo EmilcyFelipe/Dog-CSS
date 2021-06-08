@@ -1,9 +1,9 @@
-# Dog-CSS
+# Dog-CSS Desafio do codepen
 
-![]()
+![dog](https://github.com/EmilcyFelipe/Dog-CSS/blob/master/Dog.jpg)
 
 ## Objetivo
-  I - Aprimorar e consolidar habilidades com CSS e Html. Construir um cachorro 
+  I - Aprimorar e consolidar habilidades com CSS e Html. </br>
   II - Construir um cachorro da raça, popularmente conhecida, salsicha
  
 ## Tecnologias envolvidas
